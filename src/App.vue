@@ -1,23 +1,40 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
+	
+ <div id="app">
+ 	<HeaderCom class="header"></HeaderCom>
+ 	<ul class="router">
+ 		<li><router-link to="/goods">商品</router-link></li>
+ 		<li><router-link to="/ratings">评价</router-link></li>
+ 		<li><router-link to="/seller">商家</router-link></li>
+ 	</ul>
+     <router-view></router-view>
+ </div>
+
 </template>
-
 <script>
-export default {
-  name: 'app'
-}
+	import HeaderCom from './components/common/header'
+	export default{
+		components:{
+			HeaderCom
+		}
+	}
+	
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style rel="stylesheet/scss" lang="scss" scoped>
+    .header{
+    }
+	.router{
+		background-color: rgb(255,255,255);
+		li{
+			list-style: none;
+			display: inline-block;
+			width: 30%;
+			a{
+				text-decoration: none;
+				color: rgb(77,85,93);
+				font-size: 20px;
+				line-height: 30px;
+			}
+		}
+	}
 </style>
