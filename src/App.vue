@@ -25,6 +25,9 @@
     }
 	.router{
 		background-color: rgb(255,255,255);
+		border-bottom: 1px solid #CBCFD2;
+		padding-bottom: 5px;
+		margin-bottom:0px;
 		li{
 			list-style: none;
 			display: inline-block;
