@@ -18,7 +18,7 @@
 					    </li>
 					</ul>
 				</div>
-				<div>
+				<div class="collect">
 					<img src=""/>
 					<span>已收藏</span>
 				</div>
@@ -64,12 +64,27 @@
     				h4{
     					margin: 0px;
     				}
+    				span{
+    					font-size: small;
+    				}
     			}
+    		}
+    		.collect{
+    			
+    			margin: 52px 0px 0px 20px;
+    			font-size: 14px;
     		}
     	}
     	.sellerDown{
-    		.dispacthing{
+    		border-bottom: $border_bottom;
+    		border-bottom-width: 30px;
+    		.dispatching{
+    			justify-content:space-around;
     			display: flex;
+    			li{
+    				font-size: 13px;
+    				text-align: center;
+    			}
     		}
     	}
     	
