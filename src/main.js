@@ -2,8 +2,10 @@ import Vue from 'vue'
 import App from './App'
 //  引用路由插件
 import VueRouter from 'vue-router'
- 
+import VueResource from 'vue-resource'
+
 //  使用路由插件
+Vue.use(VueResource);
 Vue.use(VueRouter)
  
 //  引入组件 
@@ -14,6 +16,7 @@ import Foo from './components/Foo'
 import Bar from './components/Bar'
   
 const routes = [
+ { path: '/', component: goods },
  { path: '/goods', component: goods },
  { path: '/ratings', component: ratings },
  { path: '/seller',component:seller},
@@ -30,5 +33,5 @@ new Vue({
  el: '#app',
  render:h => h(App)
 })
-router.push('/goods')
+//router.push('/goods')
 

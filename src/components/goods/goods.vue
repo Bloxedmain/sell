@@ -246,3 +246,23 @@
    	
    }
 </style>
+<script type="application/x-ecmascript-6">
+	 export default{
+	 	 data() {
+            return {
+                goods: [],
+            };
+        },
+        computed: {
+        	
+        },
+        created() {
+            this.$http.get('/static/data.json',[{method:"getbysearch"},{params:{id:12,name:"word"}}]).then((res) => {
+            	this.goods=res.body.goods;
+            },(req)=>{
+            	
+            });
+        },
+	 	
+	 }
+</script>
